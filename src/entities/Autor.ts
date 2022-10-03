@@ -15,6 +15,6 @@ export class Autor extends BaseEntity {
     })
     idade: number;
 
-    @OneToMany(() => Livro, (livro) => livro.autor)
+    @OneToMany(() => Livro, (livro) => livro.autor, { cascade: false })
     livros: Livro[];
 }
