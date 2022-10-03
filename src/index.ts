@@ -1,9 +1,11 @@
 import "reflect-metadata";
+import * as dotenv from "dotenv"
 import conectarDB from "./config/config_banco";
 import express from "express";
 import { criarLivroRoute } from "./routes/criar_livro";
 import { criarAutorRoute } from "./routes/criar_autor";
-import * as dotenv from "dotenv"
+import { deletarLivroRouter } from "./routes/deletar_livro";
+import { deletarAutorRouter } from "./routes/deletar_autor";
 
 dotenv.config({ path: __dirname+'/.env'})
 
@@ -19,7 +21,8 @@ try {
     app.use(express.json());
     app.use(criarAutorRoute);
     app.use(criarLivroRoute);
-
+    app.use(deletarLivroRouter);
+    app.use(deletarAutorRouter);
     
 } catch (err) {
     console.error(err)
