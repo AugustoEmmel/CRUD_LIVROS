@@ -11,4 +11,4 @@ router.delete("/api/deletar_livro/:livro_id", async (req, res) => {
     return res.json(response);
 });
 
-export { router as deletarLivroRouter };
+export { router as deletarLivroRoute };
