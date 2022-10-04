@@ -1,0 +1,3 @@
+- Rode npm install.
+- Crie um banco de dados postgres.
+- Configure as variáveis ambiente em um arquivo .env.

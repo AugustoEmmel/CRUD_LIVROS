@@ -11,4 +11,4 @@ router.delete("/api/deletar_autor/:autor_id", async (req, res) => {
     return res.json(response);
 });
 
-export { router as deletarAutorRouter };
+export { router as deletarAutorRoute };
