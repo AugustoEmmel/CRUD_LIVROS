@@ -8,6 +8,7 @@ import { deletarLivroRoute } from "./routes/deletar_livro";
 import { deletarAutorRoute } from "./routes/deletar_autor";
 import { buscarLivrosRoute } from "./routes/buscar_livros";
 import { buscarAutoresRoute } from "./routes/buscar_autores";
+import { buscarLivrosAutorRoute } from "./routes/buscar_livros_autor";
 
 dotenv.config({ path: __dirname+'/.env'})
 
@@ -26,7 +27,8 @@ try {
     app.use(deletarLivroRoute);
     app.use(deletarAutorRoute);
     app.use(buscarLivrosRoute);
-    app.use(buscarAutoresRoute)
+    app.use(buscarAutoresRoute);
+    app.use(buscarLivrosAutorRoute);
     
 } catch (err) {
     console.error(err)
